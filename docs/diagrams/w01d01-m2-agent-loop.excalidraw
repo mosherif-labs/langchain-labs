@@ -1,0 +1,347 @@
+{
+ "type": "excalidraw",
+ "version": 2,
+ "source": "https://excalidraw.com",
+ "elements": [
+  {
+   "id": "e1",
+   "type": "text",
+   "x": 20,
+   "y": 10,
+   "width": 822.8000000000001,
+   "height": 27.5,
+   "text": "The agent loop create_agent builds (your first trace, 2 model calls)",
+   "originalText": "The agent loop create_agent builds (your first trace, 2 model calls)",
+   "fontSize": 22,
+   "fontFamily": 2,
+   "textAlign": "left",
+   "verticalAlign": "top",
+   "strokeColor": "#1e1e1e",
+   "lineHeight": 1.25
+  },
+  {
+   "id": "e2",
+   "type": "text",
+   "x": 20,
+   "y": 55,
+   "width": 313.5,
+   "height": 18.75,
+   "text": "WHAT THE MODEL IS SENT (messages list)",
+   "originalText": "WHAT THE MODEL IS SENT (messages list)",
+   "fontSize": 15,
+   "fontFamily": 2,
+   "textAlign": "left",
+   "verticalAlign": "top",
+   "strokeColor": "#495057",
+   "lineHeight": 1.25
+  },
+  {
+   "id": "e3",
+   "type": "text",
+   "x": 520,
+   "y": 55,
+   "width": 123.75000000000001,
+   "height": 18.75,
+   "text": "WHAT COMES BACK",
+   "originalText": "WHAT COMES BACK",
+   "fontSize": 15,
+   "fontFamily": 2,
+   "textAlign": "left",
+   "verticalAlign": "top",
+   "strokeColor": "#495057",
+   "lineHeight": 1.25
+  },
+  {
+   "id": "e4",
+   "type": "rectangle",
+   "x": 20,
+   "y": 80,
+   "width": 460,
+   "height": 120,
+   "backgroundColor": "#e7f5ff",
+   "strokeColor": "#1e1e1e",
+   "strokeWidth": 2,
+   "strokeStyle": "solid",
+   "fillStyle": "solid",
+   "roundness": {
+    "type": 3
+   }
+  },
+  {
+   "id": "e5",
+   "type": "text",
+   "x": 34,
+   "y": 90,
+   "width": 437.25000000000006,
+   "height": 93.75,
+   "text": "Call 1 \u2192 ChatAnthropic\n\u2022 system: \"You are a helpful assistant.\"\n\u2022 user: \"What is the weather in SF?\"\n\u2022 + tool schema: get_weather(city: str)  \u2190 built from\n   your function's name, docstring, type hints",
+   "originalText": "Call 1 \u2192 ChatAnthropic\n\u2022 system: \"You are a helpful assistant.\"\n\u2022 user: \"What is the weather in SF?\"\n\u2022 + tool schema: get_weather(city: str)  \u2190 built from\n   your function's name, docstring, type hints",
+   "fontSize": 15,
+   "fontFamily": 2,
+   "textAlign": "left",
+   "verticalAlign": "top",
+   "strokeColor": "#1e1e1e",
+   "lineHeight": 1.25
+  },
+  {
+   "id": "e6",
+   "type": "arrow",
+   "x": 480,
+   "y": 140,
+   "width": 40,
+   "height": 0,
+   "points": [
+    [
+     0,
+     0
+    ],
+    [
+     40,
+     0
+    ]
+   ],
+   "strokeColor": "#1e1e1e",
+   "strokeWidth": 2,
+   "strokeStyle": "solid",
+   "endArrowhead": "arrow",
+   "startArrowhead": null,
+   "backgroundColor": "transparent"
+  },
+  {
+   "id": "e7",
+   "type": "rectangle",
+   "x": 520,
+   "y": 80,
+   "width": 460,
+   "height": 120,
+   "backgroundColor": "#a5d8ff",
+   "strokeColor": "#1e1e1e",
+   "strokeWidth": 2,
+   "strokeStyle": "solid",
+   "fillStyle": "solid",
+   "roundness": {
+    "type": 3
+   }
+  },
+  {
+   "id": "e8",
+   "type": "text",
+   "x": 534,
+   "y": 90,
+   "width": 429.00000000000006,
+   "height": 75.0,
+   "text": "AIMessage with a TOOL CALL (no answer yet)\n  tool_calls = [ get_weather(city=\"San Francisco\") ]\n\nThe model only ASKS. It can't run Python.",
+   "originalText": "AIMessage with a TOOL CALL (no answer yet)\n  tool_calls = [ get_weather(city=\"San Francisco\") ]\n\nThe model only ASKS. It can't run Python.",
+   "fontSize": 15,
+   "fontFamily": 2,
+   "textAlign": "left",
+   "verticalAlign": "top",
+   "strokeColor": "#1e1e1e",
+   "lineHeight": 1.25
+  },
+  {
+   "id": "e9",
+   "type": "arrow",
+   "x": 750,
+   "y": 200,
+   "width": 0,
+   "height": 40,
+   "points": [
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     40
+    ]
+   ],
+   "strokeColor": "#1e1e1e",
+   "strokeWidth": 2,
+   "strokeStyle": "solid",
+   "endArrowhead": "arrow",
+   "startArrowhead": null,
+   "backgroundColor": "transparent"
+  },
+  {
+   "id": "e10",
+   "type": "rectangle",
+   "x": 520,
+   "y": 240,
+   "width": 460,
+   "height": 95,
+   "backgroundColor": "#ffec99",
+   "strokeColor": "#1e1e1e",
+   "strokeWidth": 2,
+   "strokeStyle": "solid",
+   "fillStyle": "solid",
+   "roundness": {
+    "type": 3
+   }
+  },
+  {
+   "id": "e11",
+   "type": "text",
+   "x": 534,
+   "y": 250,
+   "width": 429.00000000000006,
+   "height": 56.25,
+   "text": "tools node (the agent RUNTIME, not the model)\nruns your Python: get_weather(\"San Francisco\")\n\u2192 ToolMessage: \"It's always sunny in San Francisco!\"",
+   "originalText": "tools node (the agent RUNTIME, not the model)\nruns your Python: get_weather(\"San Francisco\")\n\u2192 ToolMessage: \"It's always sunny in San Francisco!\"",
+   "fontSize": 15,
+   "fontFamily": 2,
+   "textAlign": "left",
+   "verticalAlign": "top",
+   "strokeColor": "#1e1e1e",
+   "lineHeight": 1.25
+  },
+  {
+   "id": "e12",
+   "type": "arrow",
+   "x": 520,
+   "y": 290,
+   "width": -40,
+   "height": 0,
+   "points": [
+    [
+     0,
+     0
+    ],
+    [
+     -40,
+     0
+    ]
+   ],
+   "strokeColor": "#1e1e1e",
+   "strokeWidth": 2,
+   "strokeStyle": "solid",
+   "endArrowhead": "arrow",
+   "startArrowhead": null,
+   "backgroundColor": "transparent"
+  },
+  {
+   "id": "e13",
+   "type": "rectangle",
+   "x": 20,
+   "y": 240,
+   "width": 460,
+   "height": 160,
+   "backgroundColor": "#e7f5ff",
+   "strokeColor": "#1e1e1e",
+   "strokeWidth": 2,
+   "strokeStyle": "solid",
+   "fillStyle": "solid",
+   "roundness": {
+    "type": 3
+   }
+  },
+  {
+   "id": "e14",
+   "type": "text",
+   "x": 34,
+   "y": 250,
+   "width": 404.25000000000006,
+   "height": 131.25,
+   "text": "Call 2 \u2192 ChatAnthropic  (the WHOLE list again)\n\u2022 system prompt   (re-sent: models are stateless)\n\u2022 user question\n\u2022 AIMessage(tool_call)\n\u2022 ToolMessage(result)\n\n",
+   "originalText": "Call 2 \u2192 ChatAnthropic  (the WHOLE list again)\n\u2022 system prompt   (re-sent: models are stateless)\n\u2022 user question\n\u2022 AIMessage(tool_call)\n\u2022 ToolMessage(result)\n\n",
+   "fontSize": 15,
+   "fontFamily": 2,
+   "textAlign": "left",
+   "verticalAlign": "top",
+   "strokeColor": "#1e1e1e",
+   "lineHeight": 1.25
+  },
+  {
+   "id": "e15",
+   "type": "arrow",
+   "x": 480,
+   "y": 370,
+   "width": 40,
+   "height": 0,
+   "points": [
+    [
+     0,
+     0
+    ],
+    [
+     40,
+     0
+    ]
+   ],
+   "strokeColor": "#1e1e1e",
+   "strokeWidth": 2,
+   "strokeStyle": "solid",
+   "endArrowhead": "arrow",
+   "startArrowhead": null,
+   "backgroundColor": "transparent"
+  },
+  {
+   "id": "e16",
+   "type": "rectangle",
+   "x": 520,
+   "y": 350,
+   "width": 460,
+   "height": 70,
+   "backgroundColor": "#b2f2bb",
+   "strokeColor": "#1e1e1e",
+   "strokeWidth": 2,
+   "strokeStyle": "solid",
+   "fillStyle": "solid",
+   "roundness": {
+    "type": 3
+   }
+  },
+  {
+   "id": "e17",
+   "type": "text",
+   "x": 534,
+   "y": 360,
+   "width": 305.25,
+   "height": 37.5,
+   "text": "AIMessage with TEXT, no tool_calls\n\u2192 loop stops \u2192 result[\"messages\"][-1]",
+   "originalText": "AIMessage with TEXT, no tool_calls\n\u2192 loop stops \u2192 result[\"messages\"][-1]",
+   "fontSize": 15,
+   "fontFamily": 2,
+   "textAlign": "left",
+   "verticalAlign": "top",
+   "strokeColor": "#1e1e1e",
+   "lineHeight": 1.25
+  },
+  {
+   "id": "e18",
+   "type": "rectangle",
+   "x": 20,
+   "y": 440,
+   "width": 960,
+   "height": 60,
+   "backgroundColor": "#f1f3f5",
+   "strokeColor": "#868e96",
+   "strokeWidth": 2,
+   "strokeStyle": "dashed",
+   "fillStyle": "solid",
+   "roundness": {
+    "type": 3
+   }
+  },
+  {
+   "id": "e19",
+   "type": "text",
+   "x": 34,
+   "y": 450,
+   "width": 825.0000000000001,
+   "height": 37.5,
+   "text": "Loop rule: last AIMessage has tool_calls? \u2192 yes: run tools, append results, call the model again\n                                                                 \u2192 no: that's the final answer, stop",
+   "originalText": "Loop rule: last AIMessage has tool_calls? \u2192 yes: run tools, append results, call the model again\n                                                                 \u2192 no: that's the final answer, stop",
+   "fontSize": 15,
+   "fontFamily": 2,
+   "textAlign": "left",
+   "verticalAlign": "top",
+   "strokeColor": "#1e1e1e",
+   "lineHeight": 1.25
+  }
+ ],
+ "appState": {
+  "viewBackgroundColor": "#ffffff"
+ },
+ "files": {}
+}
